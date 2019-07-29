@@ -1,0 +1,10 @@
+.Auth {
+  background: #ccc;
+  height: 100vh;
+}
+
+.title {
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
+}

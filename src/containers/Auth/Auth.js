@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import clasess from "./Auth.module.css";
 
 class Auth extends Component {
   render() {
     return (
-      <div>
-        <h1>Auth</h1>
+      <div className={clasess.Auth}>
+        <h1 className={clasess.title}>Auth</h1>
       </div>
     );
   }
