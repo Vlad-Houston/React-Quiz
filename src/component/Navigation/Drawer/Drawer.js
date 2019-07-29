@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
-import { NavLink } from "react-router-dom";
 import classes from "./Drawer.module.css";
+import { NavLink } from "react-router-dom";
 import Backdrop from "../../UI/Backdrop/Backdrop";
 
 const links = [
