@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import clasess from "./QuizList.module.css";
-import { from } from "react-router-dom";
 
 class QuizList extends Component {
   renderQuizes() {
