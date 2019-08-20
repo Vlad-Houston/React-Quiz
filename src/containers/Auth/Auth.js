@@ -2,11 +2,7 @@ import React, { Component } from "react";
 import clasess from "./Auth.module.css";
 import Button from "../../component/UI/Button/Button";
 import Input from "../../component/UI/Input/Input";
-
-function validateEmail(email) {
-  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(String(email).toLowerCase());
-}
+import is from "is_js";
 
 class Auth extends Component {
   constructor(props) {
@@ -64,7 +60,7 @@ class Auth extends Component {
     }
 
     if (validation.email) {
-      isValid = validateEmail(value) && isValid;
+      isValid = is.email(value) && isValid;
     }
 
     if (validation.minLength) {
@@ -75,8 +71,6 @@ class Auth extends Component {
   }
 
   onChangeHendler = (event, controlName) => {
-    console.log(`${controlName}: `, event.target.value);
-
     const formControls = { ...this.state.formControls };
     const control = { ...formControls[controlName] };
 
